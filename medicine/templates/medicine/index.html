@@ -1,7 +1,7 @@
 {% for medicine in medicine_list%}
     <ul>
         <li>
-            {{medicine.name}}--{{medicine.descriptions}}
+            <a href="/medicine/{{medicine.name}}/">{{medicine.name}}</a>--{{medicine.descriptions}}
         </li>
     </ul>
 {%endfor%}

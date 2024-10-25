@@ -11,3 +11,6 @@ def index(request):
     template = loader.get_template('medicine/index.html')
     context = {'medicine_list':medicine_list,}
     return HttpResponse(template.render(context, request))
+
+def detail(request, medicine_name):
+    return HttpResponse("This is medicine %s" % medicine_name)
