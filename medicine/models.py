@@ -14,7 +14,7 @@ class Medicine(models.Model):
     
 class UserMedication(models.Model):
     users = models.ForeignKey('auth.User', on_delete=models.CASCADE) #link to the user
-    medicine = models.ForeignKey(Medicine, on_delete=models.CASCASE)
+    medicine = models.ForeignKey(Medicine, on_delete=models.CASCADE)
     start_date = models.DateField()
     end_date = models.DateField(blank=True, null=True)
     dosage_taken = models.CharField(max_length=100)
